@@ -1,0 +1,52 @@
+{
+  "name": "electron-webpack-react",
+  "version": "0.0.0",
+  "description": "A simple boilerplate using Electron, electron-webpack, React, Typescript & Sass",
+  "scripts": {
+    "clean": "rm -rf dist app",
+    "postinstall": "electron-webpack dll",
+    "dev": "electron-webpack dev",
+    "dll": "electron-webpack dll",
+    "compile": "electron-webpack",
+    "dist": "electron-webpack && electron-builder --dir -c.compression=store -c.mac.identity=null",
+    "build": "electron-webpack && electron-builder"
+  },
+  "electronWebpack": {
+    "title": "Electron + Webpack + React",
+    "renderer": {
+      "dll": [
+        "react",
+        "react-dom"
+      ]
+    }
+  },
+  "build": {
+    "productName": "electron-react",
+    "directories": {
+      "output": "app"
+    }
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "source-map-support": "^0.5.12"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.0.0",
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.4",
+    "electron": "^5.0.6",
+    "electron-builder": "^20.44.4",
+    "electron-webpack": "^2.7.2",
+    "electron-webpack-ts": "^3.2.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "typescript": "^3.5.2",
+    "webpack": "^4.35.2"
+  },
+  "author": {
+    "name": "Manuel Fernandez",
+    "email": "manferlo81@gmail.com"
+  },
+  "license": "MIT"
+}
