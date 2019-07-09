@@ -24,6 +24,9 @@
     "productName": "electron-react",
     "directories": {
       "output": "app"
+    },
+    "win": {
+      "icon": "icons/win.ico"
     }
   },
   "dependencies": {
