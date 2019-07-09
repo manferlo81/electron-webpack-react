@@ -39,6 +39,26 @@ npm run dev
 npm run build
 ```
 
+## Scripts
+
+The following scripts can be run using `npm run [script]`
+
+### dev
+
+Starts the application in development mode, any changes made to the source files will be reflected immediately.
+
+### compile
+
+Compiles the source files.
+
+### build:dir
+
+Builds the application in a directory.
+
+### build
+
+Builds the application installer as a single file.
+
 ## License
 
 [MIT](LICENSE) &copy; [Manuel Fernández](https://github.com/manferlo81)

@@ -8,7 +8,7 @@
     "dev": "electron-webpack dev",
     "dll": "electron-webpack dll",
     "compile": "electron-webpack",
-    "dist": "electron-webpack && electron-builder --dir -c.compression=store -c.mac.identity=null",
+    "build:dir": "electron-webpack && electron-builder --dir -c.compression=store -c.mac.identity=null",
     "build": "electron-webpack && electron-builder"
   },
   "electronWebpack": {
