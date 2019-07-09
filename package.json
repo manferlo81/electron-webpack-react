@@ -8,7 +8,7 @@
     "dev": "electron-webpack dev",
     "dll": "electron-webpack dll",
     "compile": "electron-webpack",
-    "build:dir": "electron-webpack && electron-builder --dir -c.compression=store -c.mac.identity=null",
+    "build:dir": "electron-webpack && electron-builder --dir -c.compression store -c.mac.identity null -c.asar false",
     "build": "electron-webpack && electron-builder"
   },
   "electronWebpack": {
@@ -30,8 +30,6 @@
     }
   },
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
     "source-map-support": "^0.5.12"
   },
   "devDependencies": {
@@ -43,6 +41,8 @@
     "electron-webpack": "^2.7.4",
     "electron-webpack-ts": "^3.2.0",
     "node-sass": "^4.12.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "sass-loader": "^7.1.0",
     "typescript": "^3.5.3",
     "webpack": "^4.35.3"
