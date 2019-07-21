@@ -2,7 +2,7 @@ import { app, BrowserWindow } from "electron";
 import { join as joinPath } from "path";
 import { format as formatUrl } from "url";
 
-let mainWindow: BrowserWindow | null = null;
+let mainWindow: BrowserWindow = null as any;
 
 function focus() {
   if (mainWindow) {
@@ -45,7 +45,7 @@ function createMainWindow(): void {
   }
 
   mainWindow.on("closed", () => {
-    mainWindow = null;
+    mainWindow = null as any;
   });
 
 }
