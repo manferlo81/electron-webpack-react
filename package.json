@@ -46,7 +46,7 @@
     "sass-loader": "^7.1.0",
     "tslint": "^5.18.0",
     "typescript": "^3.5.3",
-    "webpack": "^4.38.0"
+    "webpack": "^4.41.0"
   },
   "author": {
     "name": "Manuel Fernandez",
