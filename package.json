@@ -45,7 +45,7 @@
     "react-dom": "^16.10.2",
     "sass-loader": "^8.0.0",
     "tslint": "^5.20.0",
-    "typescript": "^3.6.3",
+    "typescript": "^3.6.4",
     "webpack": "^4.41.0"
   },
   "author": {
