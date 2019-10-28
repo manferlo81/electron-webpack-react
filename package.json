@@ -30,7 +30,7 @@
     }
   },
   "dependencies": {
-    "source-map-support": "^0.5.13"
+    "source-map-support": "^0.5.14"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.6.3",
