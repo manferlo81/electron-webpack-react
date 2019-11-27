@@ -37,7 +37,7 @@
     "@types/react": "^16.9.13",
     "@types/react-dom": "^16.9.4",
     "electron": "^7.1.2",
-    "electron-builder": "^22.1.0",
+    "electron-builder": "^22.2.0",
     "electron-webpack": "^2.7.4",
     "electron-webpack-ts": "^3.2.0",
     "node-sass": "^4.13.0",
