@@ -33,7 +33,7 @@
     "source-map-support": "^0.5.16"
   },
   "devDependencies": {
-    "@babel/preset-react": "^7.8.0",
+    "@babel/preset-react": "^7.8.3",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
     "electron": "^7.1.8",
