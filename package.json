@@ -39,7 +39,7 @@
     "electron": "^8.2.0",
     "electron-builder": "^22.4.1",
     "electron-webpack": "^2.8.2",
-    "electron-webpack-ts": "^4.0.0",
+    "electron-webpack-ts": "^4.0.1",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
