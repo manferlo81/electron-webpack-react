@@ -1,8 +1,8 @@
-import { app, BrowserWindow } from "electron";
-import { join as joinPath } from "path";
-import { format as formatUrl } from "url";
+import { app, BrowserWindow } from 'electron';
+import { join as joinPath } from 'path';
+import { format as formatUrl } from 'url';
 
-let mainWindow: BrowserWindow = null as any;
+let mainWindow: BrowserWindow = null as never;
 
 function focus() {
   if (mainWindow) {
@@ -18,12 +18,12 @@ function createMainWindow(): void {
     },
   });
 
-  if (process.env.NODE_ENV === "production") {
+  if (process.env.NODE_ENV === 'production') {
 
     mainWindow.loadURL(formatUrl({
-      protocol: "file",
+      protocol: 'file',
       slashes: true,
-      pathname: joinPath(__dirname, "index.html"),
+      pathname: joinPath(__dirname, 'index.html'),
     }));
 
   } else {
@@ -31,35 +31,35 @@ function createMainWindow(): void {
     mainWindow.webContents.openDevTools();
 
     mainWindow.loadURL(formatUrl({
-      protocol: "http",
+      protocol: 'http',
       slashes: true,
       hostname: process.env.ELECTRON_WEBPACK_WDS_HOST,
       port: process.env.ELECTRON_WEBPACK_WDS_PORT,
     }));
 
-    mainWindow.webContents.on("devtools-opened", () => {
+    mainWindow.webContents.on('devtools-opened', () => {
       focus();
       setImmediate(focus);
     });
 
   }
 
-  mainWindow.on("closed", () => {
-    mainWindow = null as any;
+  mainWindow.on('closed', () => {
+    mainWindow = null as never;
   });
 
 }
 
-app.on("window-all-closed", () => {
-  if (process.platform !== "darwin") {
+app.on('window-all-closed', () => {
+  if (process.platform !== 'darwin') {
     app.quit();
   }
 });
 
-app.on("activate", () => {
+app.on('activate', () => {
   if (!mainWindow) {
     createMainWindow();
   }
 });
 
-app.on("ready", createMainWindow);
+app.on('ready', createMainWindow);

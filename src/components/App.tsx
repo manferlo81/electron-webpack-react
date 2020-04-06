@@ -1,7 +1,7 @@
-import { readFile } from "fs";
-import { join } from "path";
-import React, { Component } from "react";
-import { promisify } from "util";
+import { readFile } from 'fs';
+import { join } from 'path';
+import React, { Component } from 'react';
+import { promisify } from 'util';
 
 const read = promisify(readFile);
 
@@ -14,14 +14,14 @@ interface AppState {
 class App extends Component<{}, AppState> {
 
   public state: AppState = {
-    name: "",
-    description: "",
-    text: "",
+    name: '',
+    description: '',
+    text: '',
   };
 
   public async componentDidMount() {
-    const { name, description } = await import("../../package.json");
-    const buffer = await read(join(__static, "text.txt"));
+    const { name, description } = await import('../../package.json');
+    const buffer = await read(join(__static, 'text.txt'));
     this.setState({ name, description, text: buffer.toString() });
   }
 

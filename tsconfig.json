@@ -6,5 +6,10 @@
     "noImplicitThis": true,
     "newLine": "CRLF",
     "resolveJsonModule": true
-  }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "package.json"
+  ]
 }

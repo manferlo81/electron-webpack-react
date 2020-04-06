@@ -1,11 +1,9 @@
-import React from "react";
-import { render } from "react-dom";
-
-import "../styles/main.scss";
-
-import App from "../components/App";
+import React from 'react';
+import { render } from 'react-dom';
+import App from '../components/App';
+import '../styles/main.scss';
 
 render(
   <App />,
-  document.getElementById("app"),
+  document.getElementById('app'),
 );
