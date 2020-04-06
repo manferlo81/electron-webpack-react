@@ -1,0 +1,7 @@
+title: Electron + Webpack + React
+
+renderer:
+  # dll:
+  #   - react
+  #   - react-dom
+  template: src/renderer/index.html

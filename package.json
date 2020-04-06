@@ -11,15 +11,6 @@
     "build:dir": "electron-webpack && electron-builder --dir -c.compression store -c.mac.identity null -c.asar false",
     "build": "electron-webpack && electron-builder"
   },
-  "electronWebpack": {
-    "title": "Electron + Webpack + React",
-    "renderer": {
-      "dll": [
-        "react",
-        "react-dom"
-      ]
-    }
-  },
   "build": {
     "productName": "electron-react",
     "directories": {
