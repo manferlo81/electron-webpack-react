@@ -4,21 +4,12 @@
   "description": "A simple boilerplate using Electron, electron-webpack, React, Typescript & Sass",
   "scripts": {
     "clean": "rm -rf dist app",
-    "postinstall": "electron-webpack dll",
+    "postinstall": "echo electron-webpack dll ... dll is causing an compile error, not running for now",
     "dev": "electron-webpack dev",
     "dll": "electron-webpack dll",
     "compile": "electron-webpack",
     "build:dir": "electron-webpack && electron-builder --dir -c.compression store -c.mac.identity null -c.asar false",
     "build": "electron-webpack && electron-builder"
-  },
-  "build": {
-    "productName": "electron-react",
-    "directories": {
-      "output": "app"
-    },
-    "win": {
-      "icon": "icons/win.ico"
-    }
   },
   "dependencies": {
     "source-map-support": "^0.5.16"
