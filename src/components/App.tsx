@@ -5,8 +5,6 @@ import { promisify } from "util";
 
 const read = promisify(readFile);
 
-declare const __static: string;
-
 interface AppState {
   name: string;
   description: string;
