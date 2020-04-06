@@ -1,41 +1,30 @@
 import { readFile } from 'fs';
 import { join } from 'path';
-import React, { Component } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { promisify } from 'util';
 
 const read = promisify(readFile);
 
-interface AppState {
-  name: string;
-  description: string;
-  text: string;
-}
+const App: FC = () => {
 
-class App extends Component<{}, AppState> {
+  const [data, setData] = useState({ name: '', description: '', text: '' });
 
-  public state: AppState = {
-    name: '',
-    description: '',
-    text: '',
-  };
+  useEffect(() => {
+    (async () => {
+      const { name, description } = await import('../../package.json');
+      const buffer = await read(join(__static, 'text.txt'));
+      setData({ name, description, text: buffer.toString() });
+    })();
+  }, []);
 
-  public async componentDidMount() {
-    const { name, description } = await import('../../package.json');
-    const buffer = await read(join(__static, 'text.txt'));
-    this.setState({ name, description, text: buffer.toString() });
-  }
+  return (
+    <div>
+      <h1>{data.name}</h1>
+      <p>{data.description}</p>
+      <p>{data.text}</p>
+    </div>
+  );
 
-  public render() {
-    const { name, description, text } = this.state;
-    return (
-      <div>
-        <h1>{name}</h1>
-        <p>{description}</p>
-        <p>{text}</p>
-      </div>
-    );
-  }
-
-}
+};
 
 export default App;
