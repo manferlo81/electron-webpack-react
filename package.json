@@ -12,7 +12,7 @@
     "build": "electron-webpack && electron-builder"
   },
   "dependencies": {
-    "source-map-support": "^0.5.18"
+    "source-map-support": "^0.5.19"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.9.4",
