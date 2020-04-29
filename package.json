@@ -21,7 +21,7 @@
     "@typescript-eslint/eslint-plugin": "^2.29.0",
     "@typescript-eslint/parser": "^2.29.0",
     "electron": "^8.2.3",
-    "electron-builder": "^22.5.1",
+    "electron-builder": "^22.6.0",
     "electron-webpack": "^2.8.2",
     "electron-webpack-eslint": "^6.0.0",
     "electron-webpack-ts": "^4.0.1",
