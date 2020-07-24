@@ -33,7 +33,7 @@
     "react-dom": "^16.13.1",
     "sass-loader": "^9.0.2",
     "typescript": "^3.9.7",
-    "webpack": "^4.43.0"
+    "webpack": "^4.44.0"
   },
   "author": {
     "name": "Manuel Fernandez",
