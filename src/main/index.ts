@@ -20,7 +20,7 @@ function createMainWindow(): void {
 
   if (process.env.NODE_ENV === 'production') {
 
-    mainWindow.loadURL(formatUrl({
+    void mainWindow.loadURL(formatUrl({
       protocol: 'file',
       slashes: true,
       pathname: joinPath(__dirname, 'index.html'),
@@ -30,7 +30,7 @@ function createMainWindow(): void {
 
     mainWindow.webContents.openDevTools();
 
-    mainWindow.loadURL(formatUrl({
+    void mainWindow.loadURL(formatUrl({
       protocol: 'http',
       slashes: true,
       hostname: process.env.ELECTRON_WEBPACK_WDS_HOST,

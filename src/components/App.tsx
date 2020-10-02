@@ -10,7 +10,7 @@ const App: FC = () => {
   const [data, setData] = useState({ name: '', description: '', text: '' });
 
   useEffect(() => {
-    (async () => {
+    void (async () => {
       const { name, description } = await import('../../package.json');
       const buffer = await read(join(__static, 'text.txt'));
       setData({ name, description, text: buffer.toString() });
