@@ -10,11 +10,12 @@ const App: FC = () => {
   const [data, setData] = useState({ name: '', description: '', text: '' });
 
   useEffect(() => {
-    void (async () => {
+    const p = async () => {
       const { name, description } = await import('../../package.json');
       const buffer = await read(join(__static, 'text.txt'));
       setData({ name, description, text: buffer.toString() });
-    })();
+    };
+    void p();
   }, []);
 
   return (
