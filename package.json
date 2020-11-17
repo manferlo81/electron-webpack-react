@@ -20,7 +20,7 @@
     "@types/react-dom": "^16.9.9",
     "@typescript-eslint/eslint-plugin": "^4.7.0",
     "@typescript-eslint/parser": "^4.7.0",
-    "electron": "^10.1.5",
+    "electron": "^11.0.0",
     "electron-builder": "^22.9.1",
     "electron-webpack": "^2.8.2",
     "electron-webpack-eslint": "^6.0.0",
