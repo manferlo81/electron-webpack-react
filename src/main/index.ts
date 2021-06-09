@@ -15,6 +15,7 @@ function createMainWindow(): void {
   mainWindow = new BrowserWindow({
     webPreferences: {
       nodeIntegration: true,
+      contextIsolation: false,
     },
   });
 
